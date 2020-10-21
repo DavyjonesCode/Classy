@@ -6,6 +6,8 @@ import {
   Text,
   Button,
   Icon,
+  Divider,
+  View,
 } from "@ui-kitten/components";
 
 export const HomeIcon = (props) => (
@@ -14,10 +16,14 @@ export const HomeIcon = (props) => (
 
 export const HomeButton = () => <Button accessoryLeft={HomeIcon}>Home</Button>;
 
-const HomeScreen = () => (
-  <Layout style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-    <Text category="h1">HOME</Text>
-  </Layout>
+export const HomeScreen = () => (
+  <React.Fragment>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text category="h1">HOME</Text>
+    </View>
+    <Divider />
+    <Text category="h2">Not home</Text>
+  </React.Fragment>
 );
 
 export default () => (
