@@ -1,14 +1,14 @@
 import React from "react";
-import { Text, SafeAreaView, StyleSheet, View } from "react-native";
+import { Text, StyleSheet, View } from "react-native";
 
 import Assignment from "./assignment";
 
-export default ClassCard = () => {
+const ClassCard = () => {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
         <View style={styles.topBar}>
-          <Text style={styles.textOne}>Calss name</Text>
+          <Text style={styles.textOne}>Class name</Text>
           <Text style={styles.textOne}> 100%</Text>
         </View>
         <View style={styles.main}>
@@ -36,11 +36,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  container: {
-    backgroundColor: "#111028",
-    paddingHorizontal: 20,
-    paddingTop: 20,
-    height: "100%",
+   container: {
+  //   backgroundColor: "#111028",
+  //   paddingHorizontal: 20,
+  //   paddingTop: 20,
+  //   height: "100%",
   },
   main: {
     backgroundColor: "#00C908",
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   textOne: {
     fontSize: 25,
   },
-  assignmentstyle: {
-    justifyContent: "space-between",
-  },
 });
+
+
+export default ClassCard
