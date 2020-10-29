@@ -37,10 +37,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
    container: {
-  //   backgroundColor: "#111028",
-  //   paddingHorizontal: 20,
-  //   paddingTop: 20,
-  //   height: "100%",
+    paddingHorizontal: 20,
+    paddingTop: 20,
   },
   main: {
     backgroundColor: "#00C908",

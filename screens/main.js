@@ -9,6 +9,7 @@ const screen = () => {
     <View style={styles.container}>
       <ClassCard />
       <ClassCard />
+      <NavBar styles={styles.navBarView}/>
     </View>
   );
 };
@@ -16,8 +17,8 @@ const screen = () => {
 const styles = StyleSheet.create ({
   container: {
     backgroundColor: "#111028",
-    paddingHorizontal: 20,
-    paddingTop: 20,
+    // paddingHorizontal: 20,
+    // paddingTop: 20,
     flex: 1,
   },
 })
