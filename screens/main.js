@@ -1,29 +1,25 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { Button, View, Text, StyleSheet } from "react-native";
 
 import ClassCard from "../components/classCard";
 import NavBar from "../components/navBar";
 
 
 
-function HomeScreen({ navigation }) {
+function Main({ navigation }) {
   return (
-    <View>
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Button
-          onPress={() => navigation.navigate('Notifications')}
-          title="Go to notifications"
-        />
-      </View>
-
       <View style={styles.container}>
         <View style={styles.classcard}>
           <ClassCard />
           <ClassCard />
         </View>
         <NavBar/>
+          <Button
+          onPress={() => navigation.navigate('Menu')}
+          title="Go to menu"
+          />
       </View>
-    </View>
+
   );
 }
 

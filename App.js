@@ -1,55 +1,22 @@
-// import React from "react";
-// import { createDrawerNavigator } from '@react-navigation/drawer';
-// import { NavigationContainer } from '@react-navigation/native';
-// import HomeScreen from "./screens/main"
-// import NotificationsScreen from "./screens/menu"
-
-// const Drawer = createDrawerNavigator();
-
-// export default function App() {
-//   return (
-//     <NavigationContainer>
-//       <Drawer.Navigator initialRouteName="Home">
-//         <Drawer.Screen name="Home" component={HomeScreen} />
-//         <Drawer.Screen name="Notifications" component={NotificationsScreen} />
-//       </Drawer.Navigator>
-//     </NavigationContainer>
-//   );
-// }
-
 import * as React from 'react';
-import { Button, View } from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button
-        onPress={() => navigation.navigate('Notifications')}
-        title="Go to notifications"
-      />
-    </View>
-  );
-}
+import Main from "./screens/main"
+import Menu from "./screens/menu"
 
-function NotificationsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button onPress={() => navigation.goBack()} title="Go back home" />
-    </View>
-  );
-}
+const Stack = createStackNavigator();
 
-const Drawer = createDrawerNavigator();
-
-export default function App() {
+function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
-      </Drawer.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Main} />
+        <Stack.Screen name="Menu" component={Menu} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
+
+export default App;
