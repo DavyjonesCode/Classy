@@ -1,14 +1,14 @@
 import React from "react"
 import {View, Text, StyleSheet} from "react-native"
-import MenuIcon from '@material-ui/icons/Menu';
+
+import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 const NavBar = () => {
     return(
         <View style={styles.container}>
-            <View style={styles.directory}>
-                {/* <Menu/> */}
-                <Text style={styles.text}>Home Page</Text>
-            </View>
+            <AntDesign name="left" size={35} color="white" />
+            <Text style={styles.text}>Home Page</Text>
+            <MaterialCommunityIcons name="menu" size={35} color="white" onPress={() => navigation.navigate('Menu')} />
         </View>
     )
 }
@@ -22,17 +22,14 @@ const styles = StyleSheet.create({
         height: 60,
         borderTopColor: "white",
         borderTopWidth: 3,
-    },
-    directory: {
-        alignItems: 'center',
-
-
+        justifyContent: 'center',        
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
     text: {
         fontWeight: 'bold',
         color: 'white',
         fontSize: 25,
-        justifyContent: 'center',        
     }
 })
 
