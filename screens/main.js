@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Button } from "react-native";
 
 import ClassCard from "../components/classCard";
 import NavBar from "../components/navBar";
@@ -13,7 +13,7 @@ function Main({ navigation }) {
           <ClassCard />
           <ClassCard />
         </View>
-        <NavBar/>
+        <NavBar navigation={navigation}/>
       </View>
 
   );

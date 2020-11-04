@@ -1,17 +1,18 @@
 import React from "react"
-import {View, Text, StyleSheet} from "react-native"
+import {View, Text, StyleSheet, Button} from "react-native"
 
 import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons'; 
 
-const NavBar = () => {
+const NavBar = ({ navigation }) => {
     return(
         <View style={styles.container}>
             <AntDesign name="left" size={35} color="white" />
             <Text style={styles.text}>Home Page</Text>
-            <MaterialCommunityIcons name="menu" size={35} color="white" onPress={() => navigation.navigate('Menu')} />
+            <MaterialCommunityIcons name="menu" size={35} color="white" onPress={() => navigation.navigate('Menu')}/>
         </View>
     )
 }
+
 
 const styles = StyleSheet.create({
     container: {
