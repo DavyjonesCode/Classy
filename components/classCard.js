@@ -36,9 +36,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
-   container: {
-    paddingHorizontal: 20,
-    paddingTop: 20,
+  container: {
+    // paddingHorizontal: 20,
+    // paddingTop: 20,
   },
   main: {
     backgroundColor: "#00C908",
@@ -51,5 +51,4 @@ const styles = StyleSheet.create({
   },
 });
 
-
-export default ClassCard
+export default ClassCard;

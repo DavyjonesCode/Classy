@@ -4,23 +4,19 @@ import { View, StyleSheet, Button } from "react-native";
 import ClassCard from "../components/classCard";
 import NavBar from "../components/navBar";
 
-
-
 function Main({ navigation }) {
   return (
-      <View style={styles.container}>
-        <View style={styles.classcard}>
-          <ClassCard />
-          <ClassCard />
-        </View>
-        <NavBar navigation={navigation}/>
+    <View style={styles.container}>
+      <View style={styles.classcard}>
+        <ClassCard />
+        <ClassCard />
       </View>
-
+      <NavBar navigation={navigation} />
+    </View>
   );
 }
 
-
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   container: {
     backgroundColor: "#111028",
     flex: 1,
@@ -29,11 +25,9 @@ const styles = StyleSheet.create ({
     paddingHorizontal: 20,
     paddingTop: 20,
   },
-  navbar:{
-    flexDirection: 'column',
-
-
-  }
-})
+  navbar: {
+    flexDirection: "column",
+  },
+});
 
 export default Main;
