@@ -1,16 +1,23 @@
 import React from "react";
-import { View, StyleSheet, FlatList } from "react-native";
+import { View, StyleSheet, FlatList, Text } from "react-native";
 
 import ClassCard from "../components/classCard";
 import NavBar from "../components/navBar";
 import DATA from "../data/classes";
 
 function Main({ navigation }) {
+  const renderItem = ({ item }) => (
+    <ClassCard classTitle={item.title} classGrade={item.grade} />
+  );
+
   return (
     <View style={styles.container}>
       <View style={styles.classcard}>
-        <ClassCard classTitle={DATA[0].title} classGrade={DATA[0].grade} />
-        <ClassCard classTitle={DATA[1].title} classGrade={DATA[1].grade} />
+        <FlatList
+          data={DATA}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.title}
+        />
       </View>
       <NavBar navigation={navigation} />
     </View>

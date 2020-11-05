@@ -5,7 +5,7 @@ const DATA = [
   },
   {
     title: "AP CS",
-    grade: "98%",
+    grade: "9%",
   },
 ];
 
