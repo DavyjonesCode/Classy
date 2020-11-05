@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     flexDirection: "row",
     justifyContent: "space-between",
+    alignItems: "center",
   },
   text: {
     fontWeight: "bold",

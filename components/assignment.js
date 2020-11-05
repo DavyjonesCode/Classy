@@ -3,7 +3,7 @@ import { Text, View, StyleSheet } from "react-native";
 
 const Assignment = ({ title, grade, dueDate }) => {
   return (
-    <View style={{paddingVertical: 7}}>
+    <View style={{ paddingVertical: 7 }}>
       <View style={styles.container}>
         <Text>{title}</Text>
         <Text>{dueDate}</Text>

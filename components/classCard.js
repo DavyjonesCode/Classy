@@ -3,13 +3,13 @@ import { Text, StyleSheet, View } from "react-native";
 
 import Assignment from "./assignment";
 
-const ClassCard = () => {
+const ClassCard = ({ classTitle, classGrade }) => {
   return (
-    <View style={styles.container}>
+    <View>
       <View style={styles.card}>
         <View style={styles.topBar}>
-          <Text style={styles.textOne}>Class name</Text>
-          <Text style={styles.textOne}> 100%</Text>
+          <Text style={styles.textOne}>{classTitle}</Text>
+          <Text style={styles.textOne}> {classGrade}</Text>
         </View>
         <View style={styles.main}>
           <View>
@@ -35,10 +35,6 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     flexDirection: "row",
     justifyContent: "space-between",
-  },
-  container: {
-    // paddingHorizontal: 20,
-    // paddingTop: 20,
   },
   main: {
     backgroundColor: "#00C908",
