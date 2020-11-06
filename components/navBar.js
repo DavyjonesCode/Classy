@@ -6,7 +6,12 @@ import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
 const NavBar = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <AntDesign name="left" size={35} color="white" />
+      <AntDesign
+        name="left"
+        size={35}
+        color="white"
+        onPress={() => navigation.goBack()}
+      />
       <Text style={styles.text}>Home Page</Text>
       <MaterialCommunityIcons
         name="menu"

@@ -1,10 +1,9 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
 import Main from "./screens/main";
-import Menu from "./screens/menu";
+import ExampleClass from "./screens/ExampleClass";
 
 const Drawer = createDrawerNavigator();
 
@@ -25,7 +24,7 @@ export default function App() {
         overlayColor={0}
       >
         <Drawer.Screen name="Home" component={Main} />
-        <Drawer.Screen name="Menu" component={Menu} />
+        <Drawer.Screen name="ExampleClass" component={ExampleClass} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
