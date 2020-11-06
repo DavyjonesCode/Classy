@@ -7,7 +7,11 @@ import DATA from "../data/classes";
 
 function Main({ navigation }) {
   const renderItem = ({ item }) => (
-    <ClassCard classTitle={item.title} classGrade={item.grade} />
+    <ClassCard
+      classTitle={item.title}
+      classGrade={item.grade}
+      assignments={item.assignments}
+    />
   );
 
   return (

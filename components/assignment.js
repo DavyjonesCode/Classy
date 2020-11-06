@@ -1,13 +1,17 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
 
-const Assignment = ({ title, grade, dueDate }) => {
+const Assignment = ({
+  assignmentDueDate,
+  assignmentGrade,
+  assignmentTitle,
+}) => {
   return (
     <View style={{ paddingVertical: 7 }}>
       <View style={styles.container}>
-        <Text>{title}</Text>
-        <Text>{dueDate}</Text>
-        <Text>{grade}</Text>
+        <Text>{assignmentTitle}</Text>
+        <Text>{assignmentDueDate}</Text>
+        <Text>{assignmentGrade}</Text>
       </View>
     </View>
   );

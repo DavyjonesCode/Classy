@@ -11,7 +11,19 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Navigator
+        initialRouteName="Home"
+        drawerPosition="right"
+        edgeWidth={25}
+        drawerStyle={{
+          height: "91%",
+          width: "40%",
+          flexDirection: "row",
+          alignItems: "flex-end",
+          paddingVertical: 10,
+        }}
+        overlayColor={0}
+      >
         <Drawer.Screen name="Home" component={Main} />
         <Drawer.Screen name="Menu" component={Menu} />
       </Drawer.Navigator>

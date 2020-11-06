@@ -1,9 +1,18 @@
 import React from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { Text, StyleSheet, View, FlatList } from "react-native";
+import AssignmetnDATA from "../data/assignmentsData";
 
 import Assignment from "./assignment";
 
-const ClassCard = ({ classTitle, classGrade }) => {
+const ClassCard = ({ classTitle, classGrade, assignments }) => {
+  const renderItem = ({ item }) => (
+    <Assignment
+      assignmentTitle={item.title}
+      assignmentDueDate={item.dueDate}
+      assignmentGrade={item.grade}
+    />
+  );
+
   return (
     <View>
       <View style={styles.card}>
@@ -13,8 +22,11 @@ const ClassCard = ({ classTitle, classGrade }) => {
         </View>
         <View style={styles.main}>
           <View>
-            <Assignment title="assignment" grade="100%" dueDate="10/27" />
-            <Assignment title="assignment" grade="100%" dueDate="10/27" />
+            <FlatList
+              data={assignments}
+              renderItem={renderItem}
+              keyExtractor={(item) => item.title}
+            />
           </View>
         </View>
       </View>
