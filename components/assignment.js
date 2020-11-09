@@ -5,10 +5,11 @@ const Assignment = ({
   assignmentDueDate,
   assignmentGrade,
   assignmentTitle,
+  newColor,
 }) => {
   return (
     <View style={{ paddingVertical: 7 }}>
-      <View style={styles.container}>
+      <View style={{...styles.container, backgroundColor: newColor || "#B2EFB5"}}>
         <Text>{assignmentTitle}</Text>
         <Text>{assignmentDueDate}</Text>
         <Text>{assignmentGrade}</Text>
@@ -19,7 +20,6 @@ const Assignment = ({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#B2EFB5",
     flexDirection: "row",
     justifyContent: "center",
     justifyContent: "space-between",

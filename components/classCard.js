@@ -26,7 +26,6 @@ const ClassCard = ({ classTitle, classGrade, assignments, navigation }) => {
               data={assignments}
               renderItem={renderItem}
               keyExtractor={(item) => item.title}
-              style={styles.assignment}
             />
           </View>
         </View>
@@ -59,9 +58,6 @@ const styles = StyleSheet.create({
   textOne: {
     fontSize: 25,
   },
-  assignment: {
-    backgroundColor: "#B2EFB5",
-  }
 });
 
 export default ClassCard;

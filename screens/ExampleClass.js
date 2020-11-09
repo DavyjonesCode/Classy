@@ -15,6 +15,7 @@ function ExampleClass({ navigation, route }) {
       assignmentTitle={item.title}
       assignmentDueDate={item.dueDate}
       assignmentGrade={item.grade}
+      newColor={"purple"}
     />
   );
   return (
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   main: {
-    backgroundColor: "purple",
+    backgroundColor: "grey",
   },
 });
 
