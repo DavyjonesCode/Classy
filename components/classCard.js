@@ -1,10 +1,9 @@
 import React from "react";
-import { Text, StyleSheet, View, FlatList } from "react-native";
-import AssignmetnDATA from "../data/assignmentsData";
+import { Text, StyleSheet, View, FlatList, TouchableOpacity } from "react-native";
 
 import Assignment from "./assignment";
 
-const ClassCard = ({ classTitle, classGrade, assignments }) => {
+const ClassCard = ({ classTitle, classGrade, assignments, navigation }) => {
   const renderItem = ({ item }) => (
     <Assignment
       assignmentTitle={item.title}
@@ -15,9 +14,10 @@ const ClassCard = ({ classTitle, classGrade, assignments }) => {
 
   return (
     <View>
-      <View style={styles.card}>
+      <TouchableOpacity onPress={() => navigation.navigate("ExampleClass", {name: classTitle})}>
+      <View style={styles.card} >
         <View style={styles.topBar}>
-          <Text style={styles.textOne}>{classTitle}</Text>
+          <Text style={styles.textOne} >{classTitle}</Text>
           <Text style={styles.textOne}> {classGrade}</Text>
         </View>
         <View style={styles.main}>
@@ -26,10 +26,12 @@ const ClassCard = ({ classTitle, classGrade, assignments }) => {
               data={assignments}
               renderItem={renderItem}
               keyExtractor={(item) => item.title}
+              style={styles.assignment}
             />
           </View>
         </View>
       </View>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -57,6 +59,9 @@ const styles = StyleSheet.create({
   textOne: {
     fontSize: 25,
   },
+  assignment: {
+    backgroundColor: "#B2EFB5",
+  }
 });
 
 export default ClassCard;

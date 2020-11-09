@@ -1,9 +1,9 @@
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, Text, StyleSheet} from "react-native";
 
 import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
 
-const NavBar = ({ navigation }) => {
+const NavBar = ({ navigation, Directory }) => {
   return (
     <View style={styles.container}>
       <AntDesign
@@ -12,7 +12,7 @@ const NavBar = ({ navigation }) => {
         color="white"
         onPress={() => navigation.goBack()}
       />
-      <Text style={styles.text}>Home Page</Text>
+      <Text style={styles.text}>{Directory}</Text>
       <MaterialCommunityIcons
         name="menu"
         size={35}

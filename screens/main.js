@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, FlatList, Text } from "react-native";
+import { View, StyleSheet, FlatList} from "react-native";
 
 import ClassCard from "../components/classCard";
 import NavBar from "../components/navBar";
@@ -8,6 +8,7 @@ import DATA from "../data/classes";
 function Main({ navigation }) {
   const renderItem = ({ item }) => (
     <ClassCard
+      navigation={navigation}
       classTitle={item.title}
       classGrade={item.grade}
       assignments={item.assignments}
@@ -23,7 +24,7 @@ function Main({ navigation }) {
           keyExtractor={(item) => item.title}
         />
       </View>
-      <NavBar navigation={navigation} />
+      <NavBar navigation={navigation} Directory="Home Page"/>
     </View>
   );
 }

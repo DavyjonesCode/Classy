@@ -1,11 +1,15 @@
 import React from "react";
-import { Text, View, StyleSheet, FlatList } from "react-native";
+import {View, Text, StyleSheet, FlatList } from "react-native";
 
 import NavBar from "../components/navBar";
 import Assignment from "../components/assignment";
 import DATA from "../data/classes";
 
-function ExampleClass({ navigation }) {
+
+function ExampleClass({ navigation, route }) {
+  const {name} = route.params
+  const data = DATA.find(el => el.title == name).assignments
+
   const renderItem = ({ item }) => (
     <Assignment
       assignmentTitle={item.title}
@@ -18,26 +22,24 @@ function ExampleClass({ navigation }) {
       <View>
         <FlatList
           style={styles.main}
-          data={DATA.assignments}
+          data={data}
           renderItem={renderItem}
           keyExtractor={(item) => item.title}
         />
       </View>
-      <NavBar navigation={navigation} />
+      <NavBar navigation={navigation} Directory="Example Class"/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#111028",
+    backgroundColor: "white",
     flex: 1,
-    alignItems: "center",
+    paddingTop: 20,
   },
   main: {
-    backgroundColor: "#00C908",
-    height: 100,
-    width: 100,
+    backgroundColor: "purple",
   },
 });
 
