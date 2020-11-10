@@ -1,18 +1,23 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
+import { LinearGradient } from 'expo-linear-gradient';
+
 
 const Assignment = ({
   assignmentDueDate,
   assignmentGrade,
   assignmentTitle,
   newColor,
+  id,
 }) => {
   return (
-    <View style={{ paddingVertical: 7 }}>
+    <View style={{ paddingVertical: 7}}>
       <View style={{...styles.container, backgroundColor: newColor || "#B2EFB5"}}>
-        <Text>{assignmentTitle}</Text>
-        <Text>{assignmentDueDate}</Text>
-        <Text>{assignmentGrade}</Text>
+        {/* <LinearGradient colors={newColor || ["#B2EFB5","#B2EFB5"]} style={{...styles.container, flex: 1}}> */}
+          <Text>{assignmentTitle}</Text>
+          <Text>{assignmentDueDate}</Text>
+          <Text>{assignmentGrade}</Text>
+        {/* </LinearGradient> */}
       </View>
     </View>
   );
@@ -29,3 +34,5 @@ const styles = StyleSheet.create({
 });
 
 export default Assignment;
+
+
