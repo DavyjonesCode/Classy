@@ -5,6 +5,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import Main from "./screens/main";
 import ExampleClass from "./screens/ExampleClass";
 import BackTest from "./screens/Backtest";
+import Login from "./screens/Login";
 
 const Drawer = createDrawerNavigator();
 
@@ -25,8 +26,13 @@ export default function App() {
         overlayColor={0}
       >
         <Drawer.Screen name="Home" component={Main} />
-        <Drawer.Screen name="ExampleClass" component={ExampleClass} initialParams={{name: "MAD"}} />
-        <Drawer.Screen name ="backTest" component={BackTest} />
+        <Drawer.Screen
+          name="ExampleClass"
+          component={ExampleClass}
+          initialParams={{ name: "MAD" }}
+        />
+        <Drawer.Screen name="backTest" component={BackTest} />
+        <Drawer.Screen name="Login" component={Login} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
