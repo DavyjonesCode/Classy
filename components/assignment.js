@@ -1,11 +1,13 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
 const Assignment = ({
   assignmentDueDate,
   assignmentGrade,
   assignmentTitle,
   newColor,
+  id,
 }) => {
   return (
     <View style={{ paddingVertical: 7 }}>

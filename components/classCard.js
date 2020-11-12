@@ -36,6 +36,7 @@ const ClassCard = ({ classTitle, classGrade, assignments, navigation }) => {
                 data={assignments}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.title}
+                style={{ justifyContent: "space-evenly" }}
               />
             </View>
           </View>

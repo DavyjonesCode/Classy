@@ -29,6 +29,52 @@ const DATA = [
         dueDate: "monday",
         grade: "786%",
       },
+      {
+        title: "third thing",
+        dueDate: "some time",
+        grade: "98%",
+      },
+      // {
+      //   title: "third thing",
+      //   dueDate: "some time",
+      //   grade: "98%",
+      // },
+      // {
+      //   title: "third thing",
+      //   dueDate: "some time",
+      //   grade: "98%",
+      // },
+      // {
+      //   title: "third thing",
+      //   dueDate: "some time",
+      //   grade: "98%",
+      // },
+      // {
+      //   title: "third thing",
+      //   dueDate: "some time",
+      //   grade: "98%",
+      // },
+      // {
+      //   title: "third thing",
+      //   dueDate: "some time",
+      //   grade: "98%",
+      // },
+    ],
+  },
+  {
+    title: "Math",
+    grade: "99.999%",
+    assignments: [
+      {
+        title: "eouoeu",
+        dueDate: "yesteoeuorday",
+        grade: "50%",
+      },
+      {
+        title: "aoeiao",
+        dueDate: "iaoei",
+        grade: "90%",
+      },
     ],
   },
 ];
