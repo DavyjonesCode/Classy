@@ -1,5 +1,11 @@
 import React from "react";
-import { Text, StyleSheet, View, FlatList, TouchableOpacity } from "react-native";
+import {
+  Text,
+  StyleSheet,
+  View,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 
 import Assignment from "./assignment";
 
@@ -14,22 +20,26 @@ const ClassCard = ({ classTitle, classGrade, assignments, navigation }) => {
 
   return (
     <View>
-      <TouchableOpacity onPress={() => navigation.navigate("ExampleClass", {name: classTitle})}>
-      <View style={styles.card} >
-        <View style={styles.topBar}>
-          <Text style={styles.textOne} >{classTitle}</Text>
-          <Text style={styles.textOne}> {classGrade}</Text>
-        </View>
-        <View style={styles.main}>
-          <View>
-            <FlatList
-              data={assignments}
-              renderItem={renderItem}
-              keyExtractor={(item) => item.title}
-            />
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate("ExampleClass", { name: classTitle })
+        }
+      >
+        <View style={styles.card}>
+          <View style={styles.topBar}>
+            <Text style={styles.textOne}>{classTitle}</Text>
+            <Text style={styles.textOne}> {classGrade}</Text>
+          </View>
+          <View style={styles.main}>
+            <View>
+              <FlatList
+                data={assignments}
+                renderItem={renderItem}
+                keyExtractor={(item) => item.title}
+              />
+            </View>
           </View>
         </View>
-      </View>
       </TouchableOpacity>
     </View>
   );

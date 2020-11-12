@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-const Login = () => {
+const Login = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={{ alignItems: "center", paddingTop: 73, paddingBottom: 10 }}>
@@ -22,10 +22,18 @@ const Login = () => {
       </View>
       <Text style={styles.text}> Classy </Text>
       {/* this is where it switches to the sign in stuff */}
-      <View style={{ justifyContent: "space-between" }}>
-        <TouchableOpacity style={styles.input}>
+      <View>
+        <TouchableOpacity
+          style={styles.input}
+          onPress={() => navigation.navigate("Home", { name: "Main" })}
+        >
+          <Text style={{ paddingRight: 120 }}>Sign in with Google</Text>
           <Image
-            style={{ height: 20, width: 20, borderRadius: 1 }}
+            style={{
+              height: 30,
+              width: 30,
+              borderRadius: 1,
+            }}
             source={{
               uri:
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1004px-Google_%22G%22_Logo.svg.png",
@@ -34,6 +42,21 @@ const Login = () => {
         </TouchableOpacity>
         <TextInput style={styles.input} defaultValue="Email" />
         <TextInput style={styles.input} defaultValue="Password" />
+
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Home", { name: "Main" })}
+          style={{
+            ...styles.input,
+            backgroundColor: "#00C908",
+            width: 68,
+            alignSelf: "flex-end",
+          }}
+        >
+          <Text style={{ fontSize: 20, margin: 5, alignSelf: "center" }}>
+            Login
+          </Text>
+        </TouchableOpacity>
+        {/* add new user sign up */}
       </View>
     </View>
   );
@@ -58,10 +81,14 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    borderRadius: 2,
+    borderRadius: 8,
     width: 280,
     backgroundColor: "white",
     paddingLeft: 5,
+    flexDirection: "row",
+    alignItems: "center",
+    margin: 10,
+    color: "grey",
   },
 });
 

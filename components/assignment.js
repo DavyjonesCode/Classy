@@ -9,7 +9,9 @@ const Assignment = ({
 }) => {
   return (
     <View style={{ paddingVertical: 7 }}>
-      <View style={{...styles.container, backgroundColor: newColor || "#B2EFB5"}}>
+      <View
+        style={{ ...styles.container, backgroundColor: newColor || "#B2EFB5" }}
+      >
         <Text>{assignmentTitle}</Text>
         <Text>{assignmentDueDate}</Text>
         <Text>{assignmentGrade}</Text>
