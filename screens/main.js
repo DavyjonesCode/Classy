@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, FlatList} from "react-native";
+import { View, StyleSheet, FlatList } from "react-native";
 
 import ClassCard from "../components/classCard";
 import NavBar from "../components/navBar";
@@ -24,7 +24,7 @@ function Main({ navigation }) {
           keyExtractor={(item) => item.title}
         />
       </View>
-      <NavBar navigation={navigation} Directory="Home Page"/>
+      <NavBar navigation={navigation} Directory="Home Page" />
     </View>
   );
 }

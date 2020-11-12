@@ -13,7 +13,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator
-        initialRouteName="Home"
+        initialRouteName="Login"
         drawerPosition="right"
         edgeWidth={25}
         drawerStyle={{

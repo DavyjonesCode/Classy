@@ -1,15 +1,15 @@
 import React from "react";
-import {View, Text} from "react-native";
+import { View, Text } from "react-native";
 
 import NavBar from "../components/navBar";
 
-const BackTest = ({navigation}) => {
-    return (
-        <View style={{backgroundColor: "white", flex: 1}}>
-            <Text>hello world</Text>
-            <NavBar navigation={navigation} />
-        </View>
-    )
-}
+const BackTest = ({ navigation }) => {
+  return (
+    <View style={{ backgroundColor: "white", flex: 1 }}>
+      <Text>hello world</Text>
+      <NavBar navigation={navigation} Directory="Backtest" />
+    </View>
+  );
+};
 
-export default BackTest
+export default BackTest;
