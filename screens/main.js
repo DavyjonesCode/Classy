@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
   classcard: {
     paddingHorizontal: 20,
     paddingTop: 20,
+    paddingBottom: 60,
   },
   navbar: {
     flexDirection: "column",

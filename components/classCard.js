@@ -17,7 +17,7 @@ const ClassCard = ({ classTitle, classGrade, assignments, navigation }) => {
       assignmentGrade={item.grade}
     />
   );
-
+  const truncatedAsignments = assignments.slice(0, 3);
   return (
     <View>
       <TouchableOpacity
@@ -33,7 +33,7 @@ const ClassCard = ({ classTitle, classGrade, assignments, navigation }) => {
           <View style={styles.main}>
             <View>
               <FlatList
-                data={assignments}
+                data={truncatedAsignments}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.title}
                 style={{ justifyContent: "space-evenly" }}
