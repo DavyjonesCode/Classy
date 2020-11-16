@@ -27,12 +27,12 @@ const Login = ({ navigation }) => {
           style={styles.input}
           onPress={() => navigation.navigate("Home", { name: "Main" })}
         >
-          <Text style={{ paddingRight: 120 }}>Sign in with Google</Text>
+          <Text style={{ paddingRight: 115 }}>Sign in with Google</Text>
           <Image
             style={{
               height: 30,
               width: 30,
-              borderRadius: 1,
+              marginBottom: 1,
             }}
             source={{
               uri:

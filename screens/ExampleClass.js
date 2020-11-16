@@ -31,7 +31,7 @@ function ExampleClass({ navigation, route }) {
       <View>
         <FlatList data={data} renderItem={renderItem} />
       </View>
-      <NavBar navigation={navigation} Directory="Example Class" />
+      <NavBar navigation={navigation} Directory= {name} />
     </View>
   );
 }
