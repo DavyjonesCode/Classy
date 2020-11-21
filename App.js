@@ -1,16 +1,19 @@
 import * as React from "react";
-import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 import {
-  createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItemList,
-} from "@react-navigation/drawer";
+  MaterialCommunityIcons,
+  Entypo,
+  MaterialIcons,
+  SimpleLineIcons,
+  Ionicons,
+} from "@expo/vector-icons";
 
 import Main from "./screens/main";
 import ExampleClass from "./screens/ExampleClass";
 import BackTest from "./screens/Backtest";
 import Login from "./screens/Login";
+import Profile from "./screens/Profile";
 
 const Drawer = createDrawerNavigator();
 
@@ -20,24 +23,77 @@ export default function App() {
       <Drawer.Navigator
         initialRouteName="Login"
         drawerPosition="right"
-        edgeWidth={25}
+        edgeWidth={30}
+        drawerContentOptions={{ labelStyle: { color: "white" } }}
         drawerStyle={{
           height: "91%",
-          width: "40%",
+          width: "55%",
           flexDirection: "row",
           alignItems: "flex-end",
           paddingVertical: 10,
+          backgroundColor: "#111028",
         }}
-        overlayColor={0}
+        //overlayColor={1}
       >
-        <Drawer.Screen name="Home" component={Main} />
+        <Drawer.Screen
+          name="Profile"
+          component={Profile}
+          options={{
+            drawerLabel: "Profile",
+            drawerIcon: () => (
+              <Ionicons
+                name="md-person"
+                size={30}
+                color="white"
+                style={{ alignSelf: "flex-start" }}
+              />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="Home"
+          component={Main}
+          options={{
+            drawerLabel: "Home",
+            drawerIcon: () => <Entypo name="home" size={30} color="white" />,
+          }}
+        />
         <Drawer.Screen
           name="ExampleClass"
           component={ExampleClass}
           initialParams={{ name: "MAD" }}
+          options={{
+            drawerLabel: "Class",
+            drawerIcon: () => (
+              <MaterialIcons name="class" size={30} color="white" />
+            ),
+          }}
         />
-        <Drawer.Screen name="backTest" component={BackTest} />
-        <Drawer.Screen name="Login" component={Login} />
+        <Drawer.Screen
+          name="backTest"
+          component={BackTest}
+          options={{
+            drawerStyle: { backgroundColor: "red" },
+            drawerLabel: "BackTest",
+            drawerIcon: () => (
+              <MaterialCommunityIcons
+                name="test-tube"
+                size={30}
+                color="white"
+              />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="Login"
+          component={Login}
+          options={{
+            drawerLabel: "Logout",
+            drawerIcon: () => (
+              <SimpleLineIcons name="logout" size={30} color="white" />
+            ),
+          }}
+        />
       </Drawer.Navigator>
     </NavigationContainer>
   );
