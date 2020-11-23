@@ -1,114 +1,20 @@
-const DATA = [
-  {
-    title: "MAD",
-    grade: "98%",
-    assignments: [
-      {
-        title: "classwork",
-        dueDate: "yesterday",
-        grade: "5%",
-      },
-      {
-        title: "homework",
-        dueDate: "monday",
-        grade: "9%",
-      },
-    ],
-  },
-  {
-    title: "AP CS",
-    grade: "9%",
-    assignments: [
-      {
-        title: "classwork",
-        dueDate: "yesterday",
-        grade: "45%",
-      },
-      {
-        title: "homework",
-        dueDate: "monday",
-        grade: "786%",
-      },
-      {
-        title: "third thing",
-        dueDate: "some time",
-        grade: "98%",
-      },
-      {
-        title: "third thing",
-        dueDate: "some time",
-        grade: "98%",
-      },
-      {
-        title: "third thing",
-        dueDate: "some time",
-        grade: "98%",
-      },
-      {
-        title: "third thing",
-        dueDate: "some time",
-        grade: "98%",
-      },
-      {
-        title: "third thing",
-        dueDate: "some time",
-        grade: "98%",
-      },
-      {
-        title: "third thing",
-        dueDate: "some time",
-        grade: "98%",
-      },
-    ],
-  },
-  {
-    title: "Math",
-    grade: "99.999%",
-    assignments: [
-      {
-        title: "eouoeu",
-        dueDate: "yesteoeuorday",
-        grade: "50%",
-      },
-      {
-        title: "aoeiao",
-        dueDate: "iaoei",
-        grade: "90%",
-      },
-    ],
-  },
-  {
-    title: "Math2",
-    grade: "99.999%",
-    assignments: [
-      {
-        title: "eouoeu",
-        dueDate: "yesteoeuorday",
-        grade: "50%",
-      },
-      {
-        title: "aoeiao",
-        dueDate: "iaoei",
-        grade: "90%",
-      },
-    ],
-  },
-  {
-    title: "Math3",
-    grade: "99.999%",
-    assignments: [
-      {
-        title: "eouoeu",
-        dueDate: "yesteoeuorday",
-        grade: "50%",
-      },
-      {
-        title: "aoeiao",
-        dueDate: "iaoei",
-        grade: "90%",
-      },
-    ],
-  },
-];
+import React, {useState, useEffect} from "react";
+import {View,Text} from 'react-native'
+import useUsers from "../hooks/useUsers"
 
-export default DATA;
+export default () => {
+  const [loading, posts] = useUers('https://run.mocky.io/v3/e8201a37-60a8-4c05-9030-3055ad1a0ef4')
+  
+  return(
+    <View>
+      <View>
+        {loading ? (<Text>loading...</Text>) :  (
+          <View>
+           <Text>id</Text>
+           <Text>title</Text>
+          </View>
+        )}
+      </View>
+    </View>
+  )
+}
