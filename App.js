@@ -35,7 +35,7 @@ export default function App() {
         }}
         //overlayColor={1}
       >
-        <Drawer.Screen
+        {/* <Drawer.Screen
           name="Profile"
           component={Profile}
           options={{
@@ -49,7 +49,7 @@ export default function App() {
               />
             ),
           }}
-        />
+        /> */}
         <Drawer.Screen
           name="Home"
           component={Main}

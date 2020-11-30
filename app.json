@@ -2,6 +2,7 @@
   "expo": {
     "name": "Classy",
     "slug": "Classy",
+    "description": "Welcome to clasy",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
