@@ -69,7 +69,7 @@ export default function App() {
             ),
           }}
         />
-        <Drawer.Screen
+        {/* <Drawer.Screen
           name="backTest"
           component={BackTest}
           options={{
@@ -83,7 +83,7 @@ export default function App() {
               />
             ),
           }}
-        />
+        /> */}
         <Drawer.Screen
           name="Login"
           component={Login}
