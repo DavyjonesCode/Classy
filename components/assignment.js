@@ -14,9 +14,9 @@ const Assignment = ({
       <View
         style={{ ...styles.container, backgroundColor: newColor || "#B2EFB5" }}
       >
-        <Text>{assignmentTitle}</Text>
-        <Text>{assignmentDueDate}</Text>
-        <Text>{assignmentGrade}</Text>
+        <Text numberOfLines="1" style = {{flex: 1, textAlign: "left"}} >{assignmentTitle}</Text>
+        <Text style = {{flex: 1, textAlign: 'center'}}>{assignmentDueDate}</Text>
+        <Text style = {{flex: 1, textAlign: 'right'}}>{assignmentGrade}</Text>
       </View>
     </View>
   );
@@ -25,8 +25,7 @@ const Assignment = ({
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    justifyContent: "center",
-    justifyContent: "space-between",
+    //justifyContent: "flex-start",
     paddingHorizontal: 10,
     paddingVertical: 7,
   },
