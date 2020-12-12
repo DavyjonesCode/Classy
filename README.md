@@ -10,3 +10,11 @@ In its current state, Classy is only an MVP (Minimum Viable Product) with no _re
 - [ ] get and submit classwork, quizzes, or tests
 - [ ] imports from all your classes, from Canvas to Blackboard
 - [ ] login with your own email and password or with Google
+
+![MarketingSlide1](./docs/assets/1.jpg)
+
+![MarketingSlide2](./docs/assets/2.jpg)
+
+![MarketingSlide3](./docs/assets/3.jpg)
+
+![MarketingSlide4](./docs/assets/4.jpg)
